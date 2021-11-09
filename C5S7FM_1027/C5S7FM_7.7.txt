@@ -1,0 +1,6 @@
+alter table termekek;
+add szin varchar(12);
+
+drop table termekek;
+
+delete from termekek where kategoria = null;

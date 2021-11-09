@@ -1,0 +1,11 @@
+insert into termekek values(1,'lapát',2000,'k1');
+insert into termekek values(2,'sepru',4000,'k2');
+insert into termekek values(3,'mosogató gél',1500,'k2');
+insert into termekek values(4,'szappan',1000,'k1');
+insert into termekek values(5,'pohár',2400,'k1');
+
+delete from termekek where ear < 1500;
+
+update termekek
+set ear = ear - (ear*0.10);
+where kategoria = 'k1';
