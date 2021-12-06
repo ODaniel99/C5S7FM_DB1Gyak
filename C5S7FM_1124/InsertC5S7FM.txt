@@ -1,0 +1,22 @@
+insert into Oktató values('OD39XA', 'Lakatos Endre', 'AIFTsz');
+insert into Oktató values('M2P68C', 'Jónás Béla', 'AIFTsz');
+insert into Oktató values('SER32V', 'Galovics Géza', 'MIRTsz');
+
+insert into Tárgy values(1, 5, 'Programozás alapjai', 'M2P68C');
+insert into Tárgy values(2, 3, 'A fizika története', 'M2P68C');
+insert into Tárgy values(3, 5, 'Szoftvertechnológia', 'SER32V');
+insert into Tárgy values(4, 2, 'Webtechnológiák', 'OD39XA');
+insert into Tárgy values(5, 5, 'Számítógép hálózatok', 'SER32V');
+
+insert into Hallgató values('C5S7FM', 'Orosz Dániel', 'BProf', '23/08/1999', 3508, 'Miskolc', 'Szamóca köz', 1);
+insert into Hallgató values('GJSR59', 'Balogh Erik', 'BProf', '08/12/2000', 3571, 'Alsózsolca', 'Görgey Artúr út', 32);
+insert into Hallgató values('DT0FSW', 'Geréb Ágnes', 'BI', '29/06/2002', 3412, 'Bogács', 'Kossuth utca', 57);
+insert into Hallgató values('QE5F32', 'Horváth Balázs', 'BProf', '09/25/1998', 3521, 'Miskolc Szirma', 'Akácos utca', 20);
+insert into Hallgató values('PRES43', 'Faragó Attila', 'BI', '07/12/2000', 3561, 'Felsőzsolca', 'Radnóti Miklós utca', 7);
+insert into Hallgató values('G53FOS', 'Haladás Géza', 'BI', '07/12/2000', 3527, 'Miskolc', 'Kruspér utca', 23);
+
+insert into hallgat values(3, 5, 3, 'C5S7FM');
+insert into hallgat values(1, 4, 2, 'GJSR59');
+insert into hallgat values(2, 5, 4, 'DT0FSW');
+insert into hallgat values(3, 2, 1, 'QE5F32');
+insert into hallgat values(4, 3, 5, 'PRES43');

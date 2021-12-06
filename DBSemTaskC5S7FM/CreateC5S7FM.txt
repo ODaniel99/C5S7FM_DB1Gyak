@@ -1,0 +1,70 @@
+create table Személyi_edző(
+SzKód int primary key,
+Név varchar(30) not null,
+Telefonszám varchar(14),
+Írányítószám number,
+Város varchar(30),
+Utca varchar(30),
+Házszám number
+);
+
+create table Fizetés(
+FKód int primary key,
+Összeg number,
+Készpénz number(1),
+Bankkártya number(1),
+Dátum date
+);
+
+create table Edzőterem(
+EKód int primary key,
+Írányítószám number,
+Város varchar(30),
+Utca varchar(30),
+Házszám number,
+Név varchar(30)
+);
+ 
+create table Munkavégzés(
+SzKód int,
+EKód int,
+primary key (SzKód, EKód),
+foreign key (SzKód) references Személyi_edző(SzKód),
+foreign key (EKód) references Edzőterem(EKód)
+);
+
+create table Személyi_edző_Típus(
+Típus varchar(30) not null,
+SzKód int,
+primary key (Típus, SzKód),
+foreign key(SzKód) references Személyi_edző(SzKód)
+);
+
+create table Bérlet(
+BKód int primary key,
+Kezdet date,
+Vége date,
+FKód int,
+foreign key (FKód) references Fizetés(FKód)
+);
+
+create table Tag(
+TKód int primary key,
+Név varchar(30) not null,
+Telefonszám varchar(14),
+Lakcím varchar(60),
+Születési_dátum date,
+Email_cím varchar(25),
+SzKód int,
+BKód int,
+foreign key (SzKód) references Személyi_edző(SzKód),
+foreign key (BKód) references Bérlet(BKód)
+);
+
+create table Edzés(
+TKód int,
+EKód int,
+primary key (TKód, EKód),
+foreign key (TKód) references Tag(TKód),
+foreign key (EKód) references Edzőterem(EKód)
+);

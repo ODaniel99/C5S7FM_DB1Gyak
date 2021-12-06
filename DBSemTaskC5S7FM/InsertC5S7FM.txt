@@ -1,0 +1,119 @@
+Fizetés tábla:
+
+begin
+insert into Fizetés values (1, '8000', '1', '0', '06/12/2021');
+insert into Fizetés values (2, '4000', '0', '1', '09/06/2021');
+insert into Fizetés values (3, '10000', '0', '1', '03/27/2020');
+insert into Fizetés values (4, '7000', '0', '1', '09/09/2020');
+insert into Fizetés values (5, '13000', '1', '0', '11/14/2021');
+insert into Fizetés values (6, '5000', '0', '1', '10/17/2021');
+insert into Fizetés values (7, '1000', '0', '1', '05/24/2021');
+insert into Fizetés values (8, '3500', '1', '0', '12/29/2021');
+insert into Fizetés values (9, '12000', '0', '1', '03/07/2021');
+insert into Fizetés values (10, '6000', '0', '1', '02/27/2021');
+end;
+
+Edzőterem tábla:
+
+begin
+insert into Edzőterem values(1, '3700', 'Kazincbarcika', 'Béke tér', '3', 'King Gym');
+insert into Edzőterem values(2, '3500', 'Miskolc', 'Szeles utca', '71', 'BB Gym');
+insert into Edzőterem values(3, '3500', 'Miskolc', 'Széchenyi István út', '3', 'Not Jam Fitness');
+insert into Edzőterem values(4, '3500', 'Miskolc', 'Csokonai Vitéz Mihály utca', '37', 'Kingsize Gym');
+insert into Edzőterem values(5, '3433', 'Nyékládháza', 'Erkel utca', '22', 'Wellnesss Fitness');
+insert into Edzőterem values(6, '3580', 'Tiszaújváros', 'Rózsa tér', '18', 'Planet Fitness');
+insert into Edzőterem values(7, '4090', 'Polgár', 'Hajdú utca', '5', 'Metropoll Fitness');
+insert into Edzőterem values(8, '3434', 'Mályi', 'Akácos utca', '1', 'M1 Fitness');
+insert into Edzőterem values(9, '3770', 'Sajószentpéter', 'Fecske út', '4', 'Cutler Fitness');
+insert into Edzőterem values(10, '3700', 'Kazincbarcika', 'Pollack Mihály utca', '48', 'Barcika Fitness');
+end;
+
+Személyi edző tábla:
+
+begin
+insert into Személyi_edző values(1, 'Molnár Levente', '+36708832584', '3500', 'Miskolc', 'Árok utca', '19');
+insert into Személyi_edző values(2, 'Bagi Dávid', '+36305445549', '3434', 'Mályi', 'Pillangó utca', '2');
+insert into Személyi_edző values(3, 'Fazekas Mátyás', '+36301232587', '4090', 'Polgár', 'Toldi utca', '40');
+insert into Személyi_edző values(4, 'Molnár Andrea', '+36202346843', '3580', 'Tiszaújváros', 'Templom út', '11');
+insert into Személyi_edző values(5, 'Kovács Erik', '+36202678300', '3500', 'Miskolc', 'Gyár utca', '4');
+insert into Személyi_edző values(6, 'Juhász Anna', '+36202223579', '3500', 'Miskolc', 'Irma utca', '26');
+insert into Személyi_edző values(7, 'Boldog Zsolt', '+36705274367', '4090', 'Polgár', 'Szőlő utca', '1');
+insert into Személyi_edző values(8, 'Fazekas Dániel', '+36302234562','3433', 'Nyékládháza', 'Boglárka utca', '16');
+insert into Személyi_edző values(9, 'Balogh Olivér', '+36302235575', '3434', 'Mályi', 'Tavasz utca', '6');
+insert into Személyi_edző values(10, 'Tompa János', '+36702986577', '3500', 'Miskolc', 'Napfény utca', '30');
+end;
+
+Munkavégzés tábla:
+
+begin
+insert into Munkavégzés values(1, 6);
+insert into Munkavégzés values(2, 3);
+insert into Munkavégzés values(3, 8);
+insert into Munkavégzés values(4, 2);
+insert into Munkavégzés values(5, 1);
+insert into Munkavégzés values(6, 9);
+insert into Munkavégzés values(7, 10);
+insert into Munkavégzés values(8, 4);
+insert into Munkavégzés values(9, 5);
+insert into Munkavégzés values(10, 7);
+end;
+
+Személyi_edző_Típus tábla:
+
+begin
+insert into Személyi_Edző_Típus values('Spinracing', 6);
+insert into Személyi_Edző_Típus values('Aerob', 5);
+insert into Személyi_Edző_Típus values('TRX', 3);
+insert into Személyi_Edző_Típus values('Cardio', 7);
+insert into Személyi_Edző_Típus values('Aerob', 10);
+insert into Személyi_Edző_Típus values('Cross training', 1);
+insert into Személyi_Edző_Típus values('Súlyemelés', 4);
+insert into Személyi_Edző_Típus values('Aerobic', 8);
+insert into Személyi_Edző_Típus values('Cross training', 2);
+insert into Személyi_Edző_Típus values('Súlyemelés', 9);
+end;
+
+Bérlet tábla:
+
+begin
+insert into Bérlet values(1, '01/14/2021', '02/14/2021', 4);
+insert into Bérlet values(2, '07/25/2021', '08/25/2021', 2);
+insert into Bérlet values(3, '11/03/2020', '11/15/2020', 8);
+insert into Bérlet values(4, '05/05/2021', '05/17/2021', 1);
+insert into Bérlet values(5, '05/21/2020', '06/21/2020', 3);
+insert into Bérlet values(6, '08/14/2021', '09/14/2021', 5);
+insert into Bérlet values(7, '04/22/2021', '05/12/2021', 6);
+insert into Bérlet values(8, '05/09/2021', '06/09/2021', 7);
+insert into Bérlet values(9, '02/20/2021', '03/20/2020', 10);
+insert into Bérlet values(10, '01/04/2020', '01/16/2020', 9);
+end;
+
+Tag tábla:
+
+begin
+insert into Tag values(1, 'Jakab József', '+36305658423', '3433 Mályi Park utca 1', '06/23/1997', 'jozsef997@gmail.com', 7, 5);
+insert into Tag values(2, 'Horváth Cintia', '+36302646759', '3433 Nyékládháza Iskola utca 7', '03/05/2001', 'hcinti45@gmail.com', 2, 1);
+insert into Tag values(3, 'Madách Dániel', '+36205234532', '3580 Tiszaújváros Dohány út 17', '09/23/2005', 'mdan2005@freemail.hu', 3, 2);
+insert into Tag values(4, 'Kiss Béla', '+36700343675', '3770 Sajószentpéter Harmat utca 30','08/23/1999', 'belakiss@gmail.com', 6, 10);
+insert into Tag values(5, 'Nagy Marcell', '+36302549301', '3433 Nyékládháza Orgona utca 21', '09/18/2001', 'marcello01@gmail.com', 5, 8);
+insert into Tag values(6, 'Smidt Gábor', '+36701067496', '3434 Mályi Szeder utca 3', '01/26/1989', 'smidt989@freemail.hu', 8, 9);
+insert into Tag values(7, 'Balogh András', '+36207234769', '4090 Polgár Hévíz utca 15', '02/14/1994', 'baloghand994@freemail.hu', 1, 4);
+insert into Tag values(8, 'Kovács Anna', '+36203016437', '3500 Miskolc Szeles utca 11', '05/26/2002', 'ankovacs02@gmail.com', 9, 7);
+insert into Tag values(9, 'Halász Géza', '+36703463760', '3580 Tiszaújváros Tisza út 5', '03/29/2005', 'gezafisher@gmail.com', 10, 6);
+insert into Tag values(10, 'Lakatos Antal', '+36300523797', '3770 Sajószentpéter Kálvin tér 4', '04/08/1982', 'laktal82@freemail.hu', 4, 3);
+end;
+
+Edzés tábla:
+
+begin
+insert into Edzés values(1, 4);
+insert into Edzés values(2, 6);
+insert into Edzés values(3, 7);
+insert into Edzés values(4, 9);
+insert into Edzés values(5, 2);
+insert into Edzés values(6, 4);
+insert into Edzés values(7, 3);
+insert into Edzés values(8, 5);
+insert into Edzés values(9, 1);
+insert into Edzés values(10, 10);
+end;

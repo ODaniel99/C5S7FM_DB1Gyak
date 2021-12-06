@@ -1,0 +1,32 @@
+1. Egyszerű select: Azok összegek és fizetésmód számának kiírása, amelyek 1000-nél többet fizettek és bankkártyával.
+select Bankkártya, Összeg from Fizetés where Összeg > 1000 and Bankkártya='1';
+
+2. Egyszerű select: Azok az edzőtermek nevének kiírása, amik „M”-betűvel kezdődnek.
+select Név from Edzőterem where név like 'M%';
+
+3. Összesítő művelet: Számolja meg azoknak a Tagoknak a számát, akik „3770” alatti lakcímen laknak.
+select count(Név) from Tag where Lakcím like '3770%';
+
+4. Összesítő művelet: A készpénzes fizetések átlag mennyisége.
+select avg(Összeg) from Fizetés where Készpénz=1;
+
+5. Outer join: A készpénzel fizetett bérletek kezdeti időpontja kiírása.
+select Fizetés.Készpénz, Bérlet.Kezdet from Fizetés full outer join Bérlet on Fizetés.FKód = Bérlet.BKód where Készpénz=1;
+
+6. Inner join: A bérlet tulajdonosát köti össze a taggal.
+select Bérlet.BKód, Tag.TKód, Tag.Név from Bérlet inner join Tag on Bérlet.BKód = Tag.TKód;
+
+7. Rendezés select: Azoknak az edzőtermek nevének kiírása, amiknek a házszáma nagyobb mint 10 csökkenő sorrendben a házszám szerint
+select Név, Házszám from Edzőterem where Házszám < 10 order by Házszám desc;
+
+8. Al-lekérdezés: Az átlagfizetéskor kártyával kevesebbet fizetők.
+select Bankkártya, Összeg from Fizetés where Összeg < (select avg(Összeg) from Fizetés) and Bankkártya=1;
+
+9. Csoportképzés: Az adott napon a bankkártyás fizetések számát írja ki.
+select count(*) "Bankkártyás fizetés", Dátum from Fizetés where Bankkártya=1 group by Dátum;
+
+10. Al-lekérdezés: A legalacsonyabb házszám fölötti edzőtermet kéri le.
+select Név, Házszám from Edzőterem where Házszám = (select min(Házszám) from Edzőterem);
+
+11. Származtatott tulajdonság: A Tagok Kora, amely származtatott tulajdonság.
+select Név, floor((sysdate-Születési_dátum)/365) as Kor from Tag;
